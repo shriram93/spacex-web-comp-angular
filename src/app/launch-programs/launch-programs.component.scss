@@ -1,0 +1,56 @@
+.launch-program {
+    height: 100%;
+    &__cards {
+      display: flex;
+      flex-wrap: wrap;
+      height: 100%;
+      &__card {
+        padding: 8px;
+        width: 100%;
+        display: inline-block;
+        &--dummy {
+          height: 30vh;
+          display: none;
+        }
+        &--dummy:last-child {
+          display: block;
+        }
+      }
+    }
+  }
+  
+  @media (min-width: 700px) {
+    .launch-program {
+      display: flex;
+      &__filter {
+        width: 25%;
+      }
+      &__cards {
+        flex: 1;
+        overflow-y: scroll;
+        &__card {
+          width: 50%;
+          &--dummy:nth-child(odd) {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  
+  @media screen and (min-width: 1024px) {
+    .launch-program {
+      &__filter {
+        width: 15%;
+      }
+      &__cards {
+        &__card {
+          width: 25%;
+          &--dummy {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  

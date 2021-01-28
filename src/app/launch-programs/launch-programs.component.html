@@ -1,0 +1,18 @@
+<div class="launch-program">
+    <div class="launch-program__cards">
+        <ng-container *ngFor="let launchProgram of launchPrograms">
+            <div class="launch-program__cards__card">
+                <spacex-card [imageurl]="launchProgram.imageurl" [missonname]="launchProgram.missonname" 
+                [flightnumber]="launchProgram.flightnumber" [missionids]="launchProgram.missionids"
+                [launchyear]="launchProgram.launchyear" [launchsuccess]="launchProgram.launchsuccess" [landsuccess]="launchProgram.landsuccess"
+                ></spacex-card>
+            </div>
+        </ng-container>
+        <ng-container *ngIf="launchPrograms.length < 5">
+            <div class="launch-program__cards__card launch-program__cards__card--dummy"></div>
+            <div class="launch-program__cards__card launch-program__cards__card--dummy"></div>
+            <div class="launch-program__cards__card launch-program__cards__card--dummy"></div>
+            <div class="launch-program__cards__card launch-program__cards__card--dummy"></div>
+        </ng-container>
+    </div>
+</div>
